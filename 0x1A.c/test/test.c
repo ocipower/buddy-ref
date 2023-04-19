@@ -29,7 +29,7 @@ void init_hash_tables(hash_table_t **ht, unsigned long int size)
 		return;
 	}
 	(*htb)->size = size;
-	(*htb)->array = (hash_node_t *)malloc(sizeof(hash_node_t *) * (*htb)->size);
+	(*htb)->array = (hash_node_t **)malloc(sizeof(hash_node_t *) * (*htb)->size);
 
 	for (int i = 0; i <  (*htb)->size; ++i)
 	{
